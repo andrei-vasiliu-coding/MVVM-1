@@ -3,6 +3,7 @@ package com.northcoders.fruityvice.model;
 public class Fruit {
 
     private long id;
+    //if the name below was different from JSON, you would write above @SerializedName("< key_name_here >)
     private String name;
     private String family;
     private String order;
