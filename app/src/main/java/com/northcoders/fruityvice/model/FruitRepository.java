@@ -20,6 +20,9 @@ public class FruitRepository {
     private MutableLiveData<List<Fruit>> mutableLiveData = new MutableLiveData<List<Fruit>>();
     private Application application;
 
+    public FruitRepository(Application application) {
+    }
+
     public MutableLiveData<List<Fruit>> getMutableLiveData() {
 
         ApiService apiService = RetrofitInstance.getService();
@@ -35,6 +38,7 @@ public class FruitRepository {
             @Override
             public void onFailure(Call<List<Fruit>> call, Throwable t) {
                 Log.e("HTTP Failure", Objects.requireNonNull(t.getMessage()));
+                Log.i("HTTP Failure for info", t.getMessage()); //another method
             }
         });
 
