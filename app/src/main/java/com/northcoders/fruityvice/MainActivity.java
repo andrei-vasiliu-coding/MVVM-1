@@ -53,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
     private void getAllFruits() {
         viewModel.getAllFruit().observe(this, new Observer<List<Fruit>>() {
             @Override
-            public void onChanged(List<Fruit> fruits) {
-                fruitList = (ArrayList<Fruit>) fruits;
+            public void onChanged(List<Fruit> fruitsFromLiveData) {
+                fruitList = (ArrayList<Fruit>) fruitsFromLiveData;
 
                 displayFruitsInRecyclerView();
             }
