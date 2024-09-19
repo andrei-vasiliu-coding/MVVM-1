@@ -16,7 +16,6 @@ import retrofit2.Response;
 
 public class FruitRepository {
 
-    private ArrayList<Fruit> fruits = new ArrayList<>();
     private MutableLiveData<List<Fruit>> mutableLiveData = new MutableLiveData<List<Fruit>>();
     private Application application;
 
